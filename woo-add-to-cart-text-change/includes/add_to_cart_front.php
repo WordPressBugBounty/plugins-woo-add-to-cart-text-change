@@ -23,6 +23,9 @@ function wactc_add_to_cart_text_filter( $text, $product ){
     
     $return = isset( $current[$type] ) && !empty( $current[$type] ) ? $current[$type] : $default_text;
 
+    // Hook for premium features to modify button text
+    $return = apply_filters( 'wactc_product_button_text', $return, $product, 'loop' );
+
     return  $return;
 }
 add_filter( 'woocommerce_product_add_to_cart_text', 'wactc_add_to_cart_text_filter', 10, 2 );
@@ -46,6 +49,10 @@ function wactc_add_to_cart_text_single_filter( $text, $product ){
     $type = $product->get_type();
     
     $return = !empty( $custom_text ) && $type !== 'external' ? $custom_text : $default_text ;
+    
+    // Hook for premium features to modify button text
+    $return = apply_filters( 'wactc_product_button_text', $return, $product, 'single' );
+    
     return $return;
 }
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'wactc_add_to_cart_text_single_filter', 10, 2 );

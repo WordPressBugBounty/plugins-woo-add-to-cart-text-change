@@ -61,6 +61,7 @@ function wactc_text_form() {
                         </td>
                     </tr>
                 </table>
+                <?php do_action( 'wactc_after_form_render' ); ?>
                 <input type="submit" name="submit" value="<?php echo esc_attr__( 'Submit', 'wactc' ); ?>" class="button button-primary"> 
                 <input type="submit" name="reset" value="<?php echo esc_attr__( 'Reset', 'wactc' ); ?>" class="button button-primary"> 
             </form>
@@ -71,6 +72,8 @@ function wactc_text_form() {
 
 
     <?php
+
+    
 }
 
 /**
