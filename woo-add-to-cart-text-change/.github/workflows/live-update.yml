@@ -1,0 +1,20 @@
+on: 
+  push:
+    branches:
+      - 2.4.0.0.disabled #input current version here
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files for bizzplugin.store
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: ftp.wctable.com
+        username: plugin@bizzplugin.store
+        password: ;z_3LH]&QjL,zWy(
+        server-dir: /woo-add-to-cart-text-change/

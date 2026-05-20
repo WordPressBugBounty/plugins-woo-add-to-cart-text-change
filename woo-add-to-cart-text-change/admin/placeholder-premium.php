@@ -5,14 +5,14 @@ class Wactc_Placeholder_premium
 
     public function __construct()
     {
-        $this->is_premium = watctc_fs()->is_premium();
+        $this->is_premium = defined( 'WACTC_PREMIUM_VERSION' );
     }
 
     public function run()
     {
         //Actually if premium enabled, then it will not called/Execute
         if( $this->is_premium ) return;
-        add_action('wactc_after_form_render', [$this, 'preimum_form_placeholder']);
+        // add_action('wactc_after_form_render', [$this, 'preimum_form_placeholder']);
     }
 
     public function preimum_form_placeholder()
@@ -64,7 +64,7 @@ class Wactc_Placeholder_premium
                                 <div style="margin-top: 43px;text-align: center;padding: 20px;background: linear-gradient(45deg, #f3d287, #91c3ee);border-radius: 16px;border: 0 none;">
                                     <h3 style="color: #e02b06ff; margin-top: 0;"><?php echo esc_html__( '🚀 Upgrade to Premium Today!', 'wactc' ); ?></h3>
                                     <p style="font-size: 16px; margin: 15px 0;"><?php echo esc_html__( 'Unlock all these powerful features and take your WooCommerce store to the next level!', 'wactc' ); ?></p>
-                                    <a href="<?php echo esc_url( watctc_fs()->get_upgrade_url() ); ?>" class="button button-primary button-hero" style="background: #d63638;border-color: #933f05; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 24px; padding: 10px 30px;">
+                                    <a href="https://codeastrology.com/downloads/" class="button button-primary button-hero" target="_blank" style="background: #d63638;border-color: #933f05; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 24px; padding: 10px 30px;">
                                         <span class="dashicons dashicons-star-filled" style="vertical-align: middle; margin-right: 5px;"></span>
                                         <?php echo esc_html__( 'Upgrade to Premium Now', 'wactc' ); ?>
                                     </a>

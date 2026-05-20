@@ -19,7 +19,7 @@ class Wactc_Page_Loader{
         $this->admin_dir = WACTC_BASE_DIR . 'admin/';
         $this->html_dir = $this->admin_dir . 'html/';
 
-        $this->is_premium = $this->is_pro = watctc_fs()->is_premium();
+        $this->is_premium = $this->is_pro = defined( 'WACTC_PREMIUM_VERSION' );
 
         add_action( 'admin_menu', [$this, 'admin_menu'] );
         

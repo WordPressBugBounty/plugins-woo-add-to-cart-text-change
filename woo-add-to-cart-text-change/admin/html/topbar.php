@@ -31,21 +31,7 @@ if( isset( $this->topbar_sub_title ) && ! empty( $this->topbar_sub_title ) ){
         </div>
         <div class="col-lg-5">
             <div class="header-button-wrapper">
-                <?php if( ! $this->is_pro){ ?>
-                    <a class="wqpmb-button reverse" 
-                        href="<?php echo esc_url( watctc_fs()->checkout_url() ) ?>" 
-                        target="_blank">
-                        <i class="wqpmb_icon-heart-filled"></i>
-                        Get Premium Offer
-                    </a>
-                <?php }else{ ?>
-                    <a class="wqpmb-btn wqpmb-has-icon" 
-
-                        href="https://customers.freemius.com/store/9916/websites" target="_blank">
-                        <span><i class=" wqpmb_icon-heart-1"></i></span>
-                        Store Login
-                    </a>
-                <?php } ?>
+                
                 
                 <a class="wqpmb-button reset" 
                     href="https://demo.wooproducttable.com/product/couple-jewelry/" 

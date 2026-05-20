@@ -1,11 +1,11 @@
 === Add to Cart Text Changer and Customize Button, Add Custom Icon ===
-Contributors: codersaiful
+Contributors: codersaiful,bizzplugin, codeastrology
 Donate link: https://checkout.freemius.com/plugin/21361/
 Tags: woocommerce add to cart, add to cart, woocommerce plugin, add to cart text change, single product cart button
 Requires at least: 4.0
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 6.4
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,13 @@ Yes, it will it work Shop/Archive/Tag page.
 == Screenshots ==
 
 == Changelog ==
+
+= 2.4.0 =
+* Added New Feature: Able to set custom Icon for Add to Cart Button
+* Tested with latest WordPress and WooCommerce version
+* Bug Fix
+* Code Optimization
+* Freemius SDK removed and replaced with custom code for better performance and reliability.
 
 = 2.3.0 =
 * Added New Feature: Able to add Icon with Button Text
